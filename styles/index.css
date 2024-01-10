@@ -104,7 +104,7 @@ img {
   outline: 0.2rem solid #A4FFAF;
 }
 .button:not(:disabled):hover img {
-  content: url("/assets/images/icon-arrow-right-green.svg");
+  content: url("/Password-Generator-App/assets/images/icon-arrow-right-green.svg");
 }
 .button img {
   margin-left: 1.6rem;
@@ -157,7 +157,7 @@ img {
   display: none;
   position: absolute;
   transform: translateX(-50%);
-  content: url("/assets/images/icon-check.svg");
+  content: url("/Password-Generator-App/assets/images/icon-check.svg");
 }
 
 @media (min-width: 48em) {
@@ -230,7 +230,7 @@ body .output__copy .copied {
   font-family: "JetBrainsMono-Bold";
 }
 body .output__copy #copy:not(.nohover):hover {
-  content: url("/assets/images/icon-copy-white.svg");
+  content: url("/Password-Generator-App/assets/images/icon-copy-white.svg");
 }
 body .generator {
   padding: 1.6rem;
