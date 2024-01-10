@@ -5,6 +5,7 @@
     border: none;
     outline: none;
     display: flex;
+    cursor: pointer;
     font-size: 1.6rem;
     padding: 1.8rem 0;
     align-items: center;
@@ -13,6 +14,21 @@
     color: variables.$dark-grey;
     font-family: "JetBrainsMono-Bold";
     background: variables.$neon-green;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    &:not(:disabled):hover {
+        color: variables.$neon-green;
+        background: variables.$dark-grey;
+        outline: 0.2rem solid variables.$neon-green;
+
+        img {
+            content: url("/assets/images/icon-arrow-right-green.svg");
+        }
+    }
 
     img {
         margin-left: 1.6rem;

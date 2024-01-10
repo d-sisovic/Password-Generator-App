@@ -24,6 +24,7 @@ body {
         gap: 1rem;
         display: flex;
         height: 6.4rem;
+        cursor: pointer;
         padding: 1.6rem;
         align-items: center;
         margin-bottom: 1.6rem;
@@ -31,6 +32,7 @@ body {
         background: variables.$dark-grey;
 
         input {
+            flex: 1;
             width: 100%;
             border: none;
             outline: none;
@@ -38,6 +40,26 @@ body {
             color: variables.$almost-white;
             background: variables.$dark-grey;
             font-family: "JetBrainsMono-Bold";
+        }
+
+        &__copy {
+            gap: 1.6rem;
+            align-items: center;
+            display: inline-flex;
+
+            .copied {
+                display: none;
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                color: variables.$neon-green;
+                font-family: "JetBrainsMono-Bold";
+            }
+
+            #copy {
+                &:not(.nohover):hover {
+                    content: url("/assets/images/icon-copy-white.svg");
+                }
+            }
         }
     }
 

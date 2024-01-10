@@ -34,27 +34,41 @@ img {
   height: 0.8rem;
   -moz-appearance: none;
        appearance: none;
-  position: relative;
   margin-top: 1.3rem;
   margin-bottom: 3.2rem;
   -webkit-appearance: none;
   background: #18171F;
+  background-image: linear-gradient(hsl(127, 100%, 82%), hsl(127, 100%, 82%));
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+.range:hover::-webkit-slider-thumb {
+  background: #18171F;
+  outline: 0.2rem solid #A4FFAF;
+}
+.range:hover::-moz-range-thumb {
+  background: #18171F;
+  outline: 0.2rem solid #A4FFAF;
 }
 .range::-webkit-slider-thumb {
+  z-index: 2;
   width: 2.8rem;
   height: 2.8rem;
   cursor: pointer;
   appearance: none;
   border-radius: 50%;
+  position: relative;
   -webkit-appearance: none;
   background: #E6E5EA;
 }
 .range::-moz-range-thumb {
+  z-index: 2;
   width: 2.8rem;
   height: 2.8rem;
   cursor: pointer;
   -moz-appearance: none;
        appearance: none;
+  position: relative;
   border-radius: 50%;
   -webkit-appearance: none;
   background: #E6E5EA;
@@ -65,6 +79,7 @@ img {
   border: none;
   outline: none;
   display: flex;
+  cursor: pointer;
   font-size: 1.6rem;
   padding: 1.8rem 0;
   align-items: center;
@@ -73,6 +88,18 @@ img {
   color: #24232C;
   font-family: "JetBrainsMono-Bold";
   background: #A4FFAF;
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.button:not(:disabled):hover {
+  color: #A4FFAF;
+  background: #24232C;
+  outline: 0.2rem solid #A4FFAF;
+}
+.button:not(:disabled):hover img {
+  content: url("/assets/images/icon-arrow-right-green.svg");
 }
 .button img {
   margin-left: 1.6rem;
@@ -156,6 +183,7 @@ body .output {
   gap: 1rem;
   display: flex;
   height: 6.4rem;
+  cursor: pointer;
   padding: 1.6rem;
   align-items: center;
   margin-bottom: 1.6rem;
@@ -163,6 +191,7 @@ body .output {
   background: #24232C;
 }
 body .output input {
+  flex: 1;
   width: 100%;
   border: none;
   outline: none;
@@ -170,6 +199,21 @@ body .output input {
   color: #E6E5EA;
   background: #24232C;
   font-family: "JetBrainsMono-Bold";
+}
+body .output__copy {
+  gap: 1.6rem;
+  align-items: center;
+  display: inline-flex;
+}
+body .output__copy .copied {
+  display: none;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #A4FFAF;
+  font-family: "JetBrainsMono-Bold";
+}
+body .output__copy #copy:not(.nohover):hover {
+  content: url("/assets/images/icon-copy-white.svg");
 }
 body .generator {
   padding: 2.1rem 1.6rem 1.6rem;

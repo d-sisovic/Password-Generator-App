@@ -5,27 +5,45 @@
     outline: none;
     height: 0.8rem;
     appearance: none;
-    position: relative;
     margin-top: 1.3rem;
     margin-bottom: 3.2rem;
     -webkit-appearance: none;
     background: variables.$very-dark-grey;
+    background-image: linear-gradient(hsl(127, 100%, 82%), hsl(127, 100%, 82%));
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+
+    &:hover {
+        &::-webkit-slider-thumb {
+            background: variables.$very-dark-grey;
+            outline: 0.2rem solid variables.$neon-green;
+        }
+
+        &::-moz-range-thumb {
+            background: variables.$very-dark-grey;
+            outline: 0.2rem solid variables.$neon-green;
+        }
+    }
 
     &::-webkit-slider-thumb {
+        z-index: 2;
         width: 2.8rem;
         height: 2.8rem;
         cursor: pointer;
         appearance: none;
         border-radius: 50%;
+        position: relative;
         -webkit-appearance: none;
         background: variables.$almost-white;
     }
 
     &::-moz-range-thumb {
+        z-index: 2;
         width: 2.8rem;
         height: 2.8rem;
         cursor: pointer;
         appearance: none;
+        position: relative;
         border-radius: 50%;
         -webkit-appearance: none;
         background: variables.$almost-white;

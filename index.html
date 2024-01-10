@@ -17,42 +17,46 @@
     <h1 class="title">Password Generator</h1>
 
     <div class="output">
-        <input value="PTx1f5DaFX" id="output" readonly></input>
+        <input id="output" placeholder="PTx1f5DaFX" readonly></input>
 
-        <img src="assets/images/icon-copy.svg" alt="copy" id="copy">
+        <div class="output__copy">
+            <span class="copied" id="copied">Copied</span>
+
+            <img src="assets/images/icon-copy.svg" alt="copy" id="copy">
+        </div>
     </div>
 
     <div class="generator">
         <div class="length">
             <p class="name">Character Length</p>
 
-            <span class="count">10</span>
+            <span class="count" id="count">10</span>
         </div>
 
-        <input type="range" id="range" min="1" max="20" class="range">
+        <input type="range" min="1" max="20" value="10" class="range" id="range">
 
         <div class="options">
             <label class="label">
                 Include Uppercase Letters
-                <input type="checkbox">
+                <input type="checkbox" value="uppercase" name="option" checked>
                 <span class="checkmark"></span>
             </label>
 
             <label class="label">
                 Include Lowercase Letters
-                <input type="checkbox">
+                <input type="checkbox" value="lowercase" name="option" checked>
                 <span class="checkmark"></span>
             </label>
 
             <label class="label">
                 Include Numbers
-                <input type="checkbox">
+                <input type="checkbox" value="numbers" name="option" checked>
                 <span class="checkmark"></span>
             </label>
 
             <label class="label">
                 Include Symbols
-                <input type="checkbox">
+                <input type="checkbox" value="symbols" name="option">
                 <span class="checkmark"></span>
             </label>
         </div>
@@ -61,9 +65,9 @@
             <p class="name">Strength</p>
 
             <div class="difficulty">
-                <span class="name">Medium</span>
+                <span class="name" id="difficulty">Medium</span>
 
-                <div class="rating">
+                <div class="rating" id="rating-container">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -72,12 +76,13 @@
             </div>
         </div>
 
-        <button class="button">
+        <button class="button" id="generate">
             Generate
-
             <img src="/assets/images/icon-arrow-right.svg" alt="arrow-right">
         </button>
     </div>
+
+    <script src="./index.js" type="module"></script>
 </body>
 
 </html>
