@@ -57,14 +57,14 @@ body {
 
             #copy {
                 &:not(.nohover):hover {
-                    content: url("/assets/images/icon-copy-white.svg");
+                    content: url("/Password-Generator-App/assets/images/icon-copy-white.svg");
                 }
             }
         }
     }
 
     .generator {
-        padding: 2.1rem 1.6rem 1.6rem;
+        padding: 1.6rem;
         background: variables.$dark-grey;
 
         .length {
@@ -129,6 +129,82 @@ body {
                     width: 1rem;
                     height: 2.8rem;
                     border: 0.2rem solid variables.$almost-white;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mq(tablet) { 
+    body { 
+        padding: 0;
+        padding-top: 13.3rem;
+
+        .container {
+            width: 54rem;
+            margin: 0 auto;
+
+            .title {
+                font-size: 2.4rem;
+                margin-bottom: 3.1rem;
+            }
+
+            .output {
+                height: 8rem;
+                margin-bottom: 2.4rem;
+                padding: 1.9rem 3.2rem;
+        
+                input {
+                    font-size: 3.2rem;
+                }
+        
+                &__copy {
+                    gap: 1.6rem;
+                    align-items: center;
+                    display: inline-flex;
+                }
+            }
+
+            .generator {
+                padding: 2.4rem 3.2rem;
+        
+                .length {
+                    .name {
+                        font-size: 1.8rem;
+                    }
+        
+                    .count {
+                        font-size: 3.2rem;
+                    }
+                }
+            }
+
+            .options {
+                gap: 1.9rem;
+            }
+        
+            .strength {
+                margin-top: 3.1rem;
+                margin-bottom: 3.2rem;
+                padding: 2.3rem 3.2rem 2.1rem 3.2rem;
+        
+                .name {
+                    font-size: 1.8rem;
+                }
+        
+                .difficulty {
+                    gap: 1.55rem;
+        
+                    .name {
+                        font-size: 2.4rem;
+                    }
+        
+        
+                    .rating {
+                        gap: 0.8rem;
+                        display: flex;
+                        align-items: center;
+                    }
                 }
             }
         }

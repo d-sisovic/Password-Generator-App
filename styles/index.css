@@ -34,8 +34,8 @@ img {
   height: 0.8rem;
   -moz-appearance: none;
        appearance: none;
-  margin-top: 1.3rem;
-  margin-bottom: 3.2rem;
+  margin-top: 1.7rem;
+  margin-bottom: 4.2rem;
   -webkit-appearance: none;
   background: #18171F;
   background-image: linear-gradient(hsl(127, 100%, 82%), hsl(127, 100%, 82%));
@@ -74,6 +74,11 @@ img {
   background: #E6E5EA;
 }
 
+@media (min-width: 48em) {
+  .range {
+    margin-top: 2.7rem;
+  }
+}
 .button {
   width: 100%;
   border: none;
@@ -99,12 +104,18 @@ img {
   outline: 0.2rem solid #A4FFAF;
 }
 .button:not(:disabled):hover img {
-  content: url("/assets/images/icon-arrow-right-green.svg");
+  content: url("/Password-Generator-App/assets/images/icon-arrow-right-green.svg");
 }
 .button img {
   margin-left: 1.6rem;
 }
 
+@media (min-width: 48em) {
+  .button {
+    padding: 2.1rem 0;
+    font-size: 1.8rem;
+  }
+}
 .label {
   display: block;
   cursor: pointer;
@@ -146,9 +157,15 @@ img {
   display: none;
   position: absolute;
   transform: translateX(-50%);
-  content: url("/assets/images/icon-check.svg");
+  content: url("/Password-Generator-App/assets/images/icon-check.svg");
 }
 
+@media (min-width: 48em) {
+  .label {
+    font-size: 1.8rem;
+    padding-left: 4.4rem;
+  }
+}
 .heading--l {
   font-size: 3.2rem;
   line-height: 4.3rem;
@@ -213,10 +230,10 @@ body .output__copy .copied {
   font-family: "JetBrainsMono-Bold";
 }
 body .output__copy #copy:not(.nohover):hover {
-  content: url("/assets/images/icon-copy-white.svg");
+  content: url("/Password-Generator-App/assets/images/icon-copy-white.svg");
 }
 body .generator {
-  padding: 2.1rem 1.6rem 1.6rem;
+  padding: 1.6rem;
   background: #24232C;
 }
 body .generator .length {
@@ -273,4 +290,63 @@ body .strength .difficulty .rating span {
   width: 1rem;
   height: 2.8rem;
   border: 0.2rem solid #E6E5EA;
+}
+
+@media (min-width: 48em) {
+  body {
+    padding: 0;
+    padding-top: 13.3rem;
+  }
+  body .container {
+    width: 54rem;
+    margin: 0 auto;
+  }
+  body .container .title {
+    font-size: 2.4rem;
+    margin-bottom: 3.1rem;
+  }
+  body .container .output {
+    height: 8rem;
+    margin-bottom: 2.4rem;
+    padding: 1.9rem 3.2rem;
+  }
+  body .container .output input {
+    font-size: 3.2rem;
+  }
+  body .container .output__copy {
+    gap: 1.6rem;
+    align-items: center;
+    display: inline-flex;
+  }
+  body .container .generator {
+    padding: 2.4rem 3.2rem;
+  }
+  body .container .generator .length .name {
+    font-size: 1.8rem;
+  }
+  body .container .generator .length .count {
+    font-size: 3.2rem;
+  }
+  body .container .options {
+    gap: 1.9rem;
+  }
+  body .container .strength {
+    margin-top: 3.1rem;
+    margin-bottom: 3.2rem;
+    padding: 2.3rem 3.2rem 2.1rem 3.2rem;
+  }
+  body .container .strength .name {
+    font-size: 1.8rem;
+  }
+  body .container .strength .difficulty {
+    gap: 1.55rem;
+  }
+  body .container .strength .difficulty .name {
+    font-size: 2.4rem;
+  }
+  body .container .strength .difficulty .rating {
+    gap: 0.8rem;
+    display: flex;
+    align-items: center;
+  }
 }/*# sourceMappingURL=index.css.map */

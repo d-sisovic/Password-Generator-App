@@ -1,4 +1,5 @@
 @use "../styles/variables";
+@use "../styles/breakpoint";
 
 .button {
     width: 100%;
@@ -26,11 +27,18 @@
         outline: 0.2rem solid variables.$neon-green;
 
         img {
-            content: url("/assets/images/icon-arrow-right-green.svg");
+            content: url("/Password-Generator-App/assets/images/icon-arrow-right-green.svg");
         }
     }
 
     img {
         margin-left: 1.6rem;
+    }
+}
+
+@include breakpoint.mq(tablet) {
+    .button {
+        padding: 2.1rem 0;
+        font-size: 1.8rem;
     }
 }

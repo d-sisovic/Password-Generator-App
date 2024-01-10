@@ -1,4 +1,5 @@
 @use "../styles/variables";
+@use "../styles/breakpoint";
 
 .label {
     display: block;
@@ -44,7 +45,14 @@
             display: none;
             position: absolute;
             transform: translateX(-50%);
-            content: url("/assets/images/icon-check.svg");
+            content: url("/Password-Generator-App/assets/images/icon-check.svg");
         }
+    }
+}
+
+@include breakpoint.mq(tablet) {
+    .label {
+        font-size: 1.8rem;
+        padding-left: 4.4rem;
     }
 }
