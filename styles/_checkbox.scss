@@ -1,0 +1,50 @@
+@use "../styles/variables";
+
+.label {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.6rem;
+    position: relative;
+    padding-left: 4rem;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    color: variables.$almost-white;
+    font-family: "JetBrainsMono-Bold";
+
+    input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        cursor: pointer;
+        position: absolute;
+
+        &:checked~.checkmark {
+            border: none;
+            background: variables.$neon-green;
+        }
+
+        &:checked~.checkmark::after {
+            display: block;
+        }
+    }
+
+    .checkmark {
+        top: 0;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        border: 0.2rem solid variables.$almost-white;
+
+        &::after {
+            left: 50%;
+            content: "";
+            display: none;
+            position: absolute;
+            transform: translateX(-50%);
+            content: url("/assets/images/icon-check.svg");
+        }
+    }
+}

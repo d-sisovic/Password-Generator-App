@@ -1,5 +1,114 @@
 @use './reset';
 @use './fonts';
+@use './range';
+@use './button';
+@use './checkbox';
 @use './variables';
 @use './typography';
 @use './breakpoint';
+
+body {
+    min-height: 100vh;
+    text-align: center;
+    padding: 6.4rem 1.6rem;
+    background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
+
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 1.6rem;
+        color: variables.$grey;
+        font-family: "JetBrainsMono-Bold";
+    }
+
+    .output {
+        gap: 1rem;
+        display: flex;
+        height: 6.4rem;
+        padding: 1.6rem;
+        align-items: center;
+        margin-bottom: 1.6rem;
+        justify-content: space-between;
+        background: variables.$dark-grey;
+
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 2.4rem;
+            color: variables.$almost-white;
+            background: variables.$dark-grey;
+            font-family: "JetBrainsMono-Bold";
+        }
+    }
+
+    .generator {
+        padding: 2.1rem 1.6rem 1.6rem;
+        background: variables.$dark-grey;
+
+        .length {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: "JetBrainsMono-Bold";
+
+            .name {
+                font-size: 1.6rem;
+                color: variables.$almost-white;
+            }
+
+            .count {
+                font-size: 2.4rem;
+                color: variables.$neon-green;
+            }
+        }
+    }
+
+    .options {
+        gap: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .strength {
+        display: flex;
+        margin-top: 3.2rem;
+        align-items: center;
+        margin-bottom: 1.6rem;
+        padding: 1.4rem 1.6rem;
+        justify-content: space-between;
+        background: variables.$very-dark-grey;
+
+        .name {
+            font-size: 1.6rem;
+            color: variables.$grey;
+            font-family: "JetBrainsMono-Bold";
+        }
+
+        .difficulty {
+            gap: 1.6rem;
+            display: flex;
+            align-items: center;
+
+            .name {
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                color: variables.$almost-white;
+                font-family: "JetBrainsMono-Bold";
+            }
+
+
+            .rating {
+                gap: 0.8rem;
+                display: flex;
+                align-items: center;
+
+                span {
+                    width: 1rem;
+                    height: 2.8rem;
+                    border: 0.2rem solid variables.$almost-white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@use "../styles/variables";
+
+.button {
+    width: 100%;
+    border: none;
+    outline: none;
+    display: flex;
+    font-size: 1.6rem;
+    padding: 1.8rem 0;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: variables.$dark-grey;
+    font-family: "JetBrainsMono-Bold";
+    background: variables.$neon-green;
+
+    img {
+        margin-left: 1.6rem;
+    }
+}

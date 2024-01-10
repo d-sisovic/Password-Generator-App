@@ -14,7 +14,70 @@
 </head>
 
 <body>
+    <h1 class="title">Password Generator</h1>
 
+    <div class="output">
+        <input value="PTx1f5DaFX" id="output" readonly></input>
+
+        <img src="assets/images/icon-copy.svg" alt="copy" id="copy">
+    </div>
+
+    <div class="generator">
+        <div class="length">
+            <p class="name">Character Length</p>
+
+            <span class="count">10</span>
+        </div>
+
+        <input type="range" id="range" min="1" max="20" class="range">
+
+        <div class="options">
+            <label class="label">
+                Include Uppercase Letters
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="label">
+                Include Lowercase Letters
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="label">
+                Include Numbers
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="label">
+                Include Symbols
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+        <div class="strength">
+            <p class="name">Strength</p>
+
+            <div class="difficulty">
+                <span class="name">Medium</span>
+
+                <div class="rating">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <button class="button">
+            Generate
+
+            <img src="/assets/images/icon-arrow-right.svg" alt="arrow-right">
+        </button>
+    </div>
 </body>
 
 </html>

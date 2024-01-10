@@ -1,0 +1,33 @@
+@use "./variables";
+
+.range {
+    width: 100%;
+    outline: none;
+    height: 0.8rem;
+    appearance: none;
+    position: relative;
+    margin-top: 1.3rem;
+    margin-bottom: 3.2rem;
+    -webkit-appearance: none;
+    background: variables.$very-dark-grey;
+
+    &::-webkit-slider-thumb {
+        width: 2.8rem;
+        height: 2.8rem;
+        cursor: pointer;
+        appearance: none;
+        border-radius: 50%;
+        -webkit-appearance: none;
+        background: variables.$almost-white;
+    }
+
+    &::-moz-range-thumb {
+        width: 2.8rem;
+        height: 2.8rem;
+        cursor: pointer;
+        appearance: none;
+        border-radius: 50%;
+        -webkit-appearance: none;
+        background: variables.$almost-white;
+    }
+}
